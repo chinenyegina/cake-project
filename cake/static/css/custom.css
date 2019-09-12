@@ -189,3 +189,12 @@ a {
           .menu-wrap .text .price span {
             color: #ec7063 !important;
           }
+          .ftco-footer{
+            background: #ec7063 !important;
+          }
+          .staff{
+            border: 1px solid #753329 !important;
+          }
+          .staff:hover{
+            border: 1px solid #f18d96 !important; 
+          }

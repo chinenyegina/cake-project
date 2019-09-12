@@ -40,10 +40,10 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="{% url 'home'%}" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="{% url 'menu' %}" class="nav-link">Menu</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+	          <li class="nav-item active"><a href="{% url 'menu' %}" class="nav-link">Menu</a></li>
+	          <li class="nav-item"><a href="{% url 'services'%}" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
-	          <li class="nav-item active"><a href="{% url 'about' %}" class="nav-link">About</a></li>
+	          <li class="nav-item "><a href="{% url 'about' %}" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
@@ -66,42 +66,184 @@
         </div>
       </div>
     </section>
-    <section>
-    <div class="container">
-      <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h2 class="mb-4">Our Menu Pricing</h2>
-          <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
-          <p class="mt-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">OUR MENU</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pricing-entry d-flex ftco-animate">
-            {% for menu in menus.all %}
-            <div class="img" style="background-image: url('{{ menu.image.url }} ');"></div>
-            <div class="desc pl-3">
-              <div class="d-flex text align-items-center">
-                <h3><span>{{ menu.name }}</span></h3>
-                <span class="price">₦{{ menu.price }} per Cupcake</span>
-              </div>
-              <div class="d-block">
-                <p>{{ menu.summary }}</p>
-                {% endfor%}
+      <div class="container">
+        <div class="row no-gutters d-flex">
+          <div class="col-lg-6 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <a href="{% url 'cupcakes' %}" class="img" style="background-image: url({% static 'images/img5.jpg)' %};"></a>
+              <div class="text p-4">
+                <h3>CUPCAKES</h3>
+                <p> </p>
+                <p class="price"> <a href="{% url 'cupcakes' %}" class="ml-2 btn  btn-outline-primary">View all</a></p>
               </div>
             </div>
           </div>
-        </section>
+          <div class="col-lg-6 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <a href="{% url 'cakes' %}" class="img" style="background-image: url({% static 'images/rev.jpeg)' %};"></a>
+              <div class="text p-4">
+                <h3>CAKES</h3>
+                <p></p>
+                <p class="price"><span></span> <a href="{% url 'cakes' %}" class="ml-2 btn  btn-outline-primary">View all</a></p>
+              </div>
+            </div>
+          </div>
 
-        <div id="map"></div>
+          <div class="col-lg-6 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <a href="{% url 'treats' %}" class="img order-lg-last" style="background-image: url({% static 'images/treat1.jpg)' %};"></a>
+              <div class="text p-4">
+                <h3>CLASSIC TREATS </h3>
+                <p> </p>
+                <p class="price"><span></span> <a href="{% url 'treats' %}" class="ml-2 btn btn-outline-primary">View all</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <a href="{% url 'cookies' %}" class="img order-lg-last" style="background-image: url({% static 'images/cookie.jpg)' %};"></a>
+              <div class="text p-4">
+                <h3>COOKIES</h3>
+                <p></p>
+                <p class="price"><span></span> <a href="{% url 'cookies' %}" class="ml-2 btn btn-outline-primary">View all</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+    		<div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Our Menu Pricing</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            <p class="mt-5"></p>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'images/cupcake.jpg)' %};"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Cup Cakes with toppings</span></h3>
+	        				<span class="price">₦700 per cupcake</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p></p>
+	        			</div>
+        			</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'images/cookie.jpg)' %};"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Chocalate Chip Cookies</span></h3>
+	        				<span class="price">₦600 per pack</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p></p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'images/cupc.jpg)' %};"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Vanila favoured cup cake</span></h3>
+	        				<span class="price">₦800 per cupcake</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p></p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'images/banc.jpeg)'%}; "></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Banana cake</span></h3>
+	        				<span class="price">₦8000 </span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>8 inch Round</p>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'images/carrot.jpeg)' %};"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Carrot cake</span></h3>
+	        				<span class="price">₦7000</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>8 inch Round</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'images/sponge.jpg)' %};"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Sponge Cake</span></h3>
+	        				<span class="price">₦7000</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>8 inch Round</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'images/rev.jpeg)' %};"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Redvelete Cake</span></h3>
+	        				<span class="price">₦9000</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>8 inch Round</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'images/car31.jpg)' %};"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span> Chocalate Cake</span></h3>
+	        				<span class="price">₦9000</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>8 inch Round</p>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
         <footer class="ftco-footer ftco-section img">
-          <div class="overlay"></div>
+        	<div class="overlay"></div>
           <div class="container">
             <div class="row mb-5">
-              <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+              <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4">
                   <h2 class="ftco-heading-2">About Us</h2>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  <p>Gina's Cakes brings you the best in baking with a gourmet twist. We feature fresh-baked cakes, cupcakes, cookies, breakfast pastries, brownies and bars, and sophisticated versions of classic snack treats. </p>
                   <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                     <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                     <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -109,65 +251,37 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
-                <div class="ftco-footer-widget mb-4">
-                  <h2 class="ftco-heading-2">Recent Blog</h2>
-                  <div class="block-21 mb-4 d-flex">
-                    <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                    <div class="text">
-                      <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                      <div class="meta">
-                        <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
-                        <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                        <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="block-21 mb-4 d-flex">
-                    <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                    <div class="text">
-                      <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                      <div class="meta">
-                        <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
-                        <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                        <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+
+              <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
                  <div class="ftco-footer-widget mb-4 ml-md-4">
                   <h2 class="ftco-heading-2">Services</h2>
                   <ul class="list-unstyled">
-                    <li><a href="#" class="py-2 d-block">Cooked</a></li>
-                    <li><a href="#" class="py-2 d-block">Deliver</a></li>
-                    <li><a href="#" class="py-2 d-block">Quality Foods</a></li>
-                    <li><a href="#" class="py-2 d-block">Mixed</a></li>
+                    <li><a href="#" class="py-2 d-block">We bake sweet Cakes</a></li>
+                    <li><a href="#" class="py-2 d-block">We Deliver</a></li>
+                    <li><a href="#" class="py-2 d-block">We do custom Cakes</a></li>
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+              <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4">
-                  <h2 class="ftco-heading-2">Have a Questions?</h2>
-                  <div class="block-23 mb-3">
-                    <ul>
-                      <li><span class="icon icon-map-marker"></span><span class="text">Road B Dachibe Rwang Street, Atiku Road Rayfield Jos Plateau, Nigeria </span></li>
-                      <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234 8032972595</span></a></li>
-                      <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@ginascakes.com</span></a></li>
-                    </ul>
-                  </div>
+                	<h2 class="ftco-heading-2">Have a Questions?</h2>
+                	<div class="block-23 mb-3">
+    	              <ul>
+    	                <li><span class="icon icon-map-marker"></span><span class="text">Road B Dachibe Rwang Street, Atiku Road Rayfield Jos Plateau, Nigeria </span></li>
+    	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234 8032972595</span></a></li>
+    	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@ginascakes.com</span></a></li>
+    	              </ul>
+    	            </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 text-center">
-
-                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              <div class="row">
+                <div class="col-md-12 text-center">
+                <p class="text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
       Copyright &copy;<script>document.write(new Date().getFullYear());</script>
       <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
               </div>
             </div>
+          </div>
           </div>
         </footer>
 

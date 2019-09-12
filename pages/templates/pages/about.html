@@ -28,7 +28,8 @@
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-      <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
   </head>
   <body>
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -40,11 +41,11 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="{% url 'home'%}" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="{% url 'menu' %}" class="nav-link">Menu</a></li>
+	          <li class="nav-item"><a href="{% url 'services' %}" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="{% url 'blog'%}" class="nav-link">Blog</a></li>
 	          <li class="nav-item active"><a href="{% url 'about' %}" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="{% url 'contact' %} " class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -104,13 +105,19 @@
     	</div>
     </section>
     <section class="ftco-about d-md-flex">
-    	<div class="one-half img" style="background-image: url({% static 'images/about.jpg)' %};"></div>
+    	<div class="one-half img" style="background-image: url({% static 'images/img10.jpg)' %};"></div>
     	<div class="one-half ftco-animate">
         <div class="heading-section ftco-animate ">
           <h2 class="mb-4">Welcome to <span class="flaticon-cake">Gina's</span> Cakes</h2>
         </div>
         <div>
-  				<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+  				<p>Gina's Cakes brings you the best in baking with a gourmet twist. We feature fresh-baked cakes, cupcakes, cookies, breakfast pastries, brownies and bars, and sophisticated versions of classic snack treats. </p>
+
+          <p> We bake custom-designed cakes range from traditional tiered wedding cakes to one-of-a-kind creations for birthdays and other celebrations, corporate events and promotions, and advertising. Our stuffs can help you build your dream cake for any of life’s celebrations, large or small.</p>
+
+          <p>Everything served at Gina's Cake is made fresh daily on the premises using the finest ingredients, including fresh butter and cream, pure whole vanilla beans, chocolate, and fresh seasonal products.</p>
+
+          <p>All of us at Gina's Cake thank you for supporting an independent, locally owned business!  We hope to see you soon!</p>
   			</div>
     	</div>
     </section>
@@ -120,7 +127,7 @@
           <div class="col-md-7 heading-section ftco-animate text-center">
             <h2 class="mb-4">Our Chef</h2>
             <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
-            <p class="mt-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p class="mt-5">Meet Our Outstanding Team</p>
           </div>
         </div>
         <div class="row">
@@ -131,7 +138,7 @@
                 <h3><a href="teacher-single.html">Gina Chinenye</a></h3>
                 <span class="position">CEO and Head Baker </span>
                 <div class="text">
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  <p>Follow on <a href="#"><i class="fab fa-facebook"></i></a>  <a href="#"><i class="fab fa-instagram"></i></a></p>
                 </div>
               </div>
             </div>
@@ -143,7 +150,7 @@
                 <h3><a href="teacher-single.html">Miracle Ebere</a></h3>
                 <span class="position">Sugarcraft Artist</span>
                 <div class="text">
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>Follow on <a href="#"><i class="fab fa-facebook"></i></a>  <a href="#"><i class="fab fa-instagram"></i></a></p>
                 </div>
               </div>
             </div>
@@ -155,7 +162,7 @@
                 <h3><a href="teacher-single.html">Uche Glory</a></h3>
                 <span class="position">Head Cake Decorator</span>
                 <div class="text">
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p>Follow on <a href="#"><i class="fab fa-facebook"></i></a>  <a href="#"><i class="fab fa-instagram"></i></a></p>
                 </div>
               </div>
             </div>
@@ -167,7 +174,7 @@
                 <h3><a href="teacher-single.html">Mary Ojima</a></h3>
                 <span class="position">Baker</span>
                 <div class="text">
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>Follow on <a href="#"><i class="fab fa-facebook"></i></a>  <a href="#"><i class="fab fa-instagram"></i></a></p>
                 </div>
               </div>
             </div>
@@ -181,25 +188,16 @@
         <div class="row justify-content-center">
         	<div class="col-md-10">
         		<div class="row">
-		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		              	<div class="icon"><span class="flaticon-pizza-1"></span></div>
+		              	<div class="icon"><span><i class="fas fa-home"></i></span></div>
 		              	<strong class="number" data-number="1">0</strong>
 		              	<span>Cake Branches</span>
 		              </div>
 		            </div>
 		          </div>
-		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		              	<div class="icon"><span class="flaticon-medal"></span></div>
-		              	<strong class="number" data-number="2">0</strong>
-		              	<span>Number of Awards</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
 		              	<div class="icon"><span class="flaticon-laugh"></span></div>
@@ -208,7 +206,7 @@
 		              </div>
 		            </div>
 		          </div>
-		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
 		              	<div class="icon"><span class="flaticon-chef"></span></div>
@@ -227,7 +225,7 @@
       <div class="container-wrap">
         <div class="row no-gutters d-md-flex align-items-center">
           <div class="col-md-6 d-flex align-self-stretch">
-            <div id="map"></div>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Rayfield%20Jos%20plateau%20state%20nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.utilitysavingexpert.com">Utility Saving Expert</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
           </div>
           <div class="col-md-6 appointment ftco-animate">
             <h3 class="mb-3">Contact Us</h3>
@@ -254,13 +252,13 @@
       </div>
     </section>
     <footer class="ftco-footer ftco-section img">
-      <div class="overlay"></div>
+    	<div class="overlay"></div>
       <div class="container">
         <div class="row mb-5">
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+          <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About Us</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>Gina's Cakes brings you the best in baking with a gourmet twist. We feature fresh-baked cakes, cupcakes, cookies, breakfast pastries, brownies and bars, and sophisticated versions of classic snack treats. </p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -268,61 +266,32 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
              <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Services</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Cooked</a></li>
-                <li><a href="#" class="py-2 d-block">Deliver</a></li>
-                <li><a href="#" class="py-2 d-block">Quality Foods</a></li>
-                <li><a href="#" class="py-2 d-block">Mixed</a></li>
+                <li><a href="#" class="py-2 d-block">We bake sweet Cakes</a></li>
+                <li><a href="#" class="py-2 d-block">We Deliver</a></li>
+                <li><a href="#" class="py-2 d-block">We do custom Cakes</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+          <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Have a Questions?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li><span class="icon icon-map-marker"></span><span class="text">Road B Dachibe Rwang Street, Atiku Road Rayfield Jos Plateau, Nigeria </span></li>
-                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234 8032972595</span></a></li>
-                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@ginascakes.com</span></a></li>
-                </ul>
-              </div>
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Road B Dachibe Rwang Street, Atiku Road Rayfield Jos Plateau, Nigeria </span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234 8032972595</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@ginascakes.com</span></a></li>
+	              </ul>
+	            </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p class="text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
