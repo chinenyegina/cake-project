@@ -127,9 +127,9 @@
           {% for special in specials.all %}
     			<div class="col-md-3 text-center ftco-animate">
       			<div class="menu-wrap">
-      				<a href="#" class="menu-img img mb-4" style="background-image: url('{{ special.image.url }}');"></a>
+      				<a href="{% url 'contact' %}" class="menu-img img mb-4" style="background-image: url('{{ special.image.url }}');"></a>
       				<div class="text">
-      					<h3><a href="#">{{ special.name }}</a></h3>
+      					<h3><a href="{% url 'contact' %}">{{ special.name }}</a></h3>
       					<p>{{ special.summary }}</p>
       					<p class="price"><span>₦{{ special.price}}</span></p>
       					<p><a href="{% url 'contact' %}" class="btn btn-white btn-outline-white">Order now</a></p>
